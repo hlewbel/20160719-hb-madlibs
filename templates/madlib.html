@@ -5,6 +5,10 @@
   <title>Madlib Output</title>
 </head>
 <body>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective }} way.
+    There once was a {{ color }} {{ noun }} 
+    {% for verb in verbs %}
+        {{ verb }}
+    {% endfor %}
+    in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective }} way.
 </body>
 </html>
