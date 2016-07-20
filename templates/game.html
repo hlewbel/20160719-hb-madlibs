@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Madlib Game</title>
+</head>
+<body>
+    Hi {{ person }}! Welcome to Madlibs!
+    <form action="/game">
+        Person name: 
+        <input type="text" name="person"></input>
+        {% for category, choices in madlibs_dict.items() %}
+            <select name= "{{ category }}" >
+            {% for choice in choices %}
+                <option value="{{ choice }}">{{ choice }}</option>
+            {% endfor %}
+            </select>
+        {% endfor %}
+        <input type="submit"></input>
+    </form>
+</body>
+</html>
