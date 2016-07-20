@@ -6,7 +6,7 @@
 </head>
 <body>
     Hi {{ person }}! Welcome to Madlibs!
-    <form action="/game">
+    <form action="/madlib">
         Person name: 
         <input type="text" name="person"></input>
         {% for category, choices in madlibs_dict.items() %}

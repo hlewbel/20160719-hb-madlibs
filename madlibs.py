@@ -58,6 +58,25 @@ def show_madlib_form():
     else:
         return render_template("goodbye.html")
 
+@app.route('/madlib')
+def show_madlib():
+    """Show madlib with input from user"""
+
+    person = request.args.get("person")
+
+    color = request.args.get("color")
+
+    noun = request.args.get("noun")
+
+    adjective = request.args.get("adjective")
+
+
+    return render_template("madlib.html", 
+                            color=color,
+                            noun=noun,
+                            adjective=adjective,
+                            person=person)
+
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
